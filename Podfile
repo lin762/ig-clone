@@ -7,6 +7,8 @@ target 'ig-clone' do
 
   # Pods for ig-clone
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   target 'ig-cloneTests' do
     inherit! :search_paths
     # Pods for testing
