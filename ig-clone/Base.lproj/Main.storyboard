@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,27 +19,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AV-tK-Fp8">
-                                <rect key="frame" x="164" y="637" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AV-tK-Fp8">
+                                <rect key="frame" x="77" y="636" width="221" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Don't have an account? Sign up."/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ziV-6K-3DI">
-                                <rect key="frame" x="47" y="321" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ziV-6K-3DI">
+                                <rect key="frame" x="12" y="314" width="351" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter e-mail..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiM-uX-07k">
-                                <rect key="frame" x="47" y="279" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eiM-uX-07k">
+                                <rect key="frame" x="12" y="279" width="351" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Tab-8e-7SW">
+                                <rect key="frame" x="101" y="205" width="173" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Vp7-my-pHZ"/>
+                                    <constraint firstAttribute="width" constant="173" id="qCP-86-fR0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6AV-tK-Fp8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="4iA-25-6yN"/>
+                            <constraint firstItem="Tab-8e-7SW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="185" id="8QI-Wu-Vgj"/>
+                            <constraint firstItem="ziV-6K-3DI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="A9W-K1-7yO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tab-8e-7SW" secondAttribute="trailing" constant="85" id="AiA-X4-q4j"/>
+                            <constraint firstItem="ziV-6K-3DI" firstAttribute="top" secondItem="eiM-uX-07k" secondAttribute="bottom" constant="5" id="CSi-qj-QbR"/>
+                            <constraint firstItem="Tab-8e-7SW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="GqO-5L-5F9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6AV-tK-Fp8" secondAttribute="trailing" constant="77" id="Q1n-Us-8Nl"/>
+                            <constraint firstItem="eiM-uX-07k" firstAttribute="top" secondItem="Tab-8e-7SW" secondAttribute="bottom" constant="8" id="UN1-oC-qZg"/>
+                            <constraint firstItem="eiM-uX-07k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="UxV-Rw-Czf"/>
+                            <constraint firstAttribute="trailing" secondItem="ziV-6K-3DI" secondAttribute="trailing" constant="12" id="X6b-lv-WXw"/>
+                            <constraint firstAttribute="trailing" secondItem="eiM-uX-07k" secondAttribute="trailing" constant="12" id="fTs-ze-mxX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6AV-tK-Fp8" secondAttribute="bottom" constant="4" id="tHv-P0-RaQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -47,4 +67,7 @@
             <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="320" height="114"/>
+    </resources>
 </document>
