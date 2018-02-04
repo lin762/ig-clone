@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" image="launch" id="96i-wZ-6R3">
-                                <rect key="frame" x="110" y="209" width="150" height="145"/>
+                                <rect key="frame" x="111.31343469124863" y="209" width="150.00000000000006" height="145.00000000000006"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>

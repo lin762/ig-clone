@@ -129,13 +129,13 @@
 			isa = PBXGroup;
 			children = (
 				83E847DE202737BF0023CE9B /* AppDelegate.swift */,
+				83B2043F2027822300D294EA /* SignUpViewController.swift */,
 				83E847E0202737BF0023CE9B /* ViewController.swift */,
 				83E847E2202737BF0023CE9B /* Main.storyboard */,
 				83E847E5202737BF0023CE9B /* Assets.xcassets */,
 				83E847E7202737BF0023CE9B /* LaunchScreen.storyboard */,
 				836245EA2027409F003F6D70 /* GoogleService-Info.plist */,
 				83E847EA202737BF0023CE9B /* Info.plist */,
-				83B2043F2027822300D294EA /* SignUpViewController.swift */,
 			);
 			path = "ig-clone";
 			sourceTree = "<group>";

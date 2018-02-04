@@ -81,12 +81,12 @@
                         <outlet property="emailField" destination="eiM-uX-07k" id="fMP-BA-sat"/>
                         <outlet property="passwordField" destination="ziV-6K-3DI" id="YgS-x4-p4b"/>
                         <segue destination="Xy3-zU-ocR" kind="presentation" identifier="signUpPageSegue" id="BaF-iU-qEl"/>
-                        <segue destination="7Ae-Pn-bAn" kind="presentation" id="ekE-Vu-ZRs"/>
+                        <segue destination="7Ae-Pn-bAn" kind="presentation" identifier="onSignInSegue" id="ekE-Vu-ZRs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="142" y="75"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Zy3-X9-5ud">
@@ -131,6 +131,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHo-SJ-SXf">
+                                <rect key="frame" x="72" y="635" width="231" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Already have an account? Sign in."/>
+                                <connections>
+                                    <action selector="backToSignIn:" destination="Xy3-zU-ocR" eventType="touchUpInside" id="Nax-PN-Vit"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -144,10 +152,13 @@
                             <constraint firstItem="Uv6-NX-329" firstAttribute="trailing" secondItem="1Ef-Xy-Yft" secondAttribute="trailing" constant="12" id="UcV-vj-lz1"/>
                             <constraint firstItem="1Ef-Xy-Yft" firstAttribute="top" secondItem="Krz-Jv-1Le" secondAttribute="bottom" constant="8" id="Y36-rB-Vk9"/>
                             <constraint firstItem="YFa-ob-ZVT" firstAttribute="top" secondItem="0QT-Nq-bnC" secondAttribute="bottom" constant="8" id="b0d-og-WmT"/>
+                            <constraint firstItem="Uv6-NX-329" firstAttribute="bottom" secondItem="JHo-SJ-SXf" secondAttribute="bottom" constant="4" id="ec2-SE-pVz"/>
                             <constraint firstItem="0QT-Nq-bnC" firstAttribute="top" secondItem="1Ef-Xy-Yft" secondAttribute="bottom" constant="8" id="fYY-Lr-6og"/>
                             <constraint firstItem="0QT-Nq-bnC" firstAttribute="leading" secondItem="Uv6-NX-329" secondAttribute="leading" constant="12" id="hs3-qV-8eV"/>
                             <constraint firstItem="Krz-Jv-1Le" firstAttribute="top" secondItem="X8F-WI-KGT" secondAttribute="bottom" constant="8" id="rqk-Lb-8DZ"/>
+                            <constraint firstItem="Uv6-NX-329" firstAttribute="trailing" secondItem="JHo-SJ-SXf" secondAttribute="trailing" constant="72" id="toK-q8-jhJ"/>
                             <constraint firstItem="Uv6-NX-329" firstAttribute="trailing" secondItem="Krz-Jv-1Le" secondAttribute="trailing" constant="12" id="u92-b7-1t9"/>
+                            <constraint firstItem="JHo-SJ-SXf" firstAttribute="leading" secondItem="Uv6-NX-329" secondAttribute="leading" constant="72" id="vT4-oc-RaM"/>
                             <constraint firstItem="1Ef-Xy-Yft" firstAttribute="leading" secondItem="Uv6-NX-329" secondAttribute="leading" constant="12" id="zv0-jM-1Rd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uv6-NX-329"/>
@@ -157,28 +168,38 @@
                         <outlet property="emailField" destination="1Ef-Xy-Yft" id="5jo-sw-82M"/>
                         <outlet property="passwordField" destination="0QT-Nq-bnC" id="lJH-UU-eKq"/>
                         <outlet property="usernameField" destination="Krz-Jv-1Le" id="NgZ-XV-nBQ"/>
-                        <segue destination="7Ae-Pn-bAn" kind="presentation" id="TIA-OF-BLa"/>
+                        <segue destination="7Ae-Pn-bAn" kind="presentation" identifier="onSignUpSegue" id="TIA-OF-BLa"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignInSegue" id="GkC-9M-edE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXH-cN-CpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="819"/>
+            <point key="canvasLocation" x="142" y="885"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="Wuo-1O-7w1">
             <objects>
                 <viewController id="yZg-wn-rtT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DeM-rK-xVh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2L-Nc-E4m">
+                                <rect key="frame" x="171" y="255" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MCL-LV-ACb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TW1-nC-hxb"/>
+                    <navigationItem key="navigationItem" title="Home" id="TW1-nC-hxb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0P-mf-lyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="457"/>
+            <point key="canvasLocation" x="1685.5999999999999" y="456.52173913043481"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="P2v-Yt-7In">
@@ -203,6 +224,6 @@
         <image name="logo" width="320" height="114"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TIA-OF-BLa"/>
+        <segue reference="ekE-Vu-ZRs"/>
     </inferredMetricsTieBreakers>
 </document>

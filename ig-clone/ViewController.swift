@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     override func viewDidLoad() {
@@ -18,6 +19,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onLogin(_ sender: Any) {
+        let email = emailField.text!
+        let password = passwordField.text!
+        
+        Auth.auth().signIn(withEmail: email, password: password){ (user,error) in
+            if user != nil{
+                print("successfully signed in")
+                self.performSegue(withIdentifier: "onSignInSegue", sender: nil)
+            }else{
+                print("Error: \(error!.localizedDescription)")
+            }
+        }
     }
     
     @IBAction func toSignUpPage(_ sender: Any) {
