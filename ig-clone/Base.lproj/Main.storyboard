@@ -25,7 +25,7 @@
                                 <state key="normal" title="Don't have an account? Sign up."/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ziV-6K-3DI">
-                                <rect key="frame" x="12" y="314" width="351" height="30"/>
+                                <rect key="frame" x="12" y="317" width="351" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -43,6 +43,13 @@
                                     <constraint firstAttribute="width" constant="173" id="qCP-86-fR0"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlZ-zk-mpz">
+                                <rect key="frame" x="12" y="355" width="351" height="30"/>
+                                <color key="backgroundColor" red="0.023529412224888802" green="0.5372549295425415" blue="0.96078431606292725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -50,13 +57,16 @@
                             <constraint firstItem="Tab-8e-7SW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="185" id="8QI-Wu-Vgj"/>
                             <constraint firstItem="ziV-6K-3DI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="A9W-K1-7yO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tab-8e-7SW" secondAttribute="trailing" constant="85" id="AiA-X4-q4j"/>
-                            <constraint firstItem="ziV-6K-3DI" firstAttribute="top" secondItem="eiM-uX-07k" secondAttribute="bottom" constant="5" id="CSi-qj-QbR"/>
+                            <constraint firstItem="ziV-6K-3DI" firstAttribute="top" secondItem="eiM-uX-07k" secondAttribute="bottom" constant="8" id="CSi-qj-QbR"/>
                             <constraint firstItem="Tab-8e-7SW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="GqO-5L-5F9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6AV-tK-Fp8" secondAttribute="trailing" constant="77" id="Q1n-Us-8Nl"/>
+                            <constraint firstAttribute="trailing" secondItem="BlZ-zk-mpz" secondAttribute="trailing" constant="12" id="Tvb-tw-1bS"/>
                             <constraint firstItem="eiM-uX-07k" firstAttribute="top" secondItem="Tab-8e-7SW" secondAttribute="bottom" constant="8" id="UN1-oC-qZg"/>
                             <constraint firstItem="eiM-uX-07k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="UxV-Rw-Czf"/>
                             <constraint firstAttribute="trailing" secondItem="ziV-6K-3DI" secondAttribute="trailing" constant="12" id="X6b-lv-WXw"/>
                             <constraint firstAttribute="trailing" secondItem="eiM-uX-07k" secondAttribute="trailing" constant="12" id="fTs-ze-mxX"/>
+                            <constraint firstItem="BlZ-zk-mpz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="hUZ-2e-yIC"/>
+                            <constraint firstItem="BlZ-zk-mpz" firstAttribute="top" secondItem="ziV-6K-3DI" secondAttribute="bottom" constant="8" id="pcq-Z4-yVF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6AV-tK-Fp8" secondAttribute="bottom" constant="4" id="tHv-P0-RaQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
