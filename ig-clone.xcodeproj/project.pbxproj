@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		162E6EE633BA163603601F01 /* Pods_ig_cloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE625EAE2AD9E8821C30A5F9 /* Pods_ig_cloneTests.framework */; };
 		836245EB2027409F003F6D70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 836245EA2027409F003F6D70 /* GoogleService-Info.plist */; };
+		836245EC20275882003F6D70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E847E7202737BF0023CE9B /* LaunchScreen.storyboard */; };
 		83E847DF202737BF0023CE9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E847DE202737BF0023CE9B /* AppDelegate.swift */; };
 		83E847E1202737BF0023CE9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E847E0202737BF0023CE9B /* ViewController.swift */; };
 		83E847E4202737BF0023CE9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E847E2202737BF0023CE9B /* Main.storyboard */; };
 		83E847E6202737BF0023CE9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83E847E5202737BF0023CE9B /* Assets.xcassets */; };
-		83E847E9202737BF0023CE9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E847E7202737BF0023CE9B /* LaunchScreen.storyboard */; };
 		83E847F4202737BF0023CE9B /* ig_cloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E847F3202737BF0023CE9B /* ig_cloneTests.swift */; };
 		83E847FF202737BF0023CE9B /* ig_cloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E847FE202737BF0023CE9B /* ig_cloneUITests.swift */; };
 		BB91B8254584CFBFCFA6B2A6 /* Pods_ig_cloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99579C373E01E7FA9D75DDDB /* Pods_ig_cloneUITests.framework */; };
@@ -284,8 +284,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83E847E9202737BF0023CE9B /* LaunchScreen.storyboard in Resources */,
 				836245EB2027409F003F6D70 /* GoogleService-Info.plist in Resources */,
+				836245EC20275882003F6D70 /* LaunchScreen.storyboard in Resources */,
 				83E847E6202737BF0023CE9B /* Assets.xcassets in Resources */,
 				83E847E4202737BF0023CE9B /* Main.storyboard in Resources */,
 			);
