@@ -10,6 +10,7 @@
 		162E6EE633BA163603601F01 /* Pods_ig_cloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE625EAE2AD9E8821C30A5F9 /* Pods_ig_cloneTests.framework */; };
 		836245EB2027409F003F6D70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 836245EA2027409F003F6D70 /* GoogleService-Info.plist */; };
 		836245EC20275882003F6D70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E847E7202737BF0023CE9B /* LaunchScreen.storyboard */; };
+		83B204402027822300D294EA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2043F2027822300D294EA /* SignUpViewController.swift */; };
 		83E847DF202737BF0023CE9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E847DE202737BF0023CE9B /* AppDelegate.swift */; };
 		83E847E1202737BF0023CE9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E847E0202737BF0023CE9B /* ViewController.swift */; };
 		83E847E4202737BF0023CE9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E847E2202737BF0023CE9B /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		6975F72C18C26F7C8927AA57 /* Pods_ig_clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ig_clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		826C885BC7B96EE106F0A60E /* Pods-ig-cloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ig-cloneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ig-cloneTests/Pods-ig-cloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		836245EA2027409F003F6D70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		83B2043F2027822300D294EA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		83E847DB202737BF0023CE9B /* ig-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ig-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E847DE202737BF0023CE9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83E847E0202737BF0023CE9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				83E847E7202737BF0023CE9B /* LaunchScreen.storyboard */,
 				836245EA2027409F003F6D70 /* GoogleService-Info.plist */,
 				83E847EA202737BF0023CE9B /* Info.plist */,
+				83B2043F2027822300D294EA /* SignUpViewController.swift */,
 			);
 			path = "ig-clone";
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B204402027822300D294EA /* SignUpViewController.swift in Sources */,
 				83E847E1202737BF0023CE9B /* ViewController.swift in Sources */,
 				83E847DF202737BF0023CE9B /* AppDelegate.swift in Sources */,
 			);
