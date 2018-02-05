@@ -13,6 +13,7 @@
 		83B204402027822300D294EA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2043F2027822300D294EA /* SignUpViewController.swift */; };
 		83B204422027D16000D294EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B204412027D16000D294EA /* HomeViewController.swift */; };
 		83B204442027E15200D294EA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B204432027E15200D294EA /* ProfileViewController.swift */; };
+		83B204482027E7BB00D294EA /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B204472027E7BB00D294EA /* PostCell.swift */; };
 		83E847DF202737BF0023CE9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E847DE202737BF0023CE9B /* AppDelegate.swift */; };
 		83E847E1202737BF0023CE9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E847E0202737BF0023CE9B /* ViewController.swift */; };
 		83E847E4202737BF0023CE9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E847E2202737BF0023CE9B /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		83B2043F2027822300D294EA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		83B204412027D16000D294EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		83B204432027E15200D294EA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		83B204472027E7BB00D294EA /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		83E847DB202737BF0023CE9B /* ig-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ig-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E847DE202737BF0023CE9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83E847E0202737BF0023CE9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		83B204452027E76200D294EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83B2043F2027822300D294EA /* SignUpViewController.swift */,
+				83B204412027D16000D294EA /* HomeViewController.swift */,
+				83E847E0202737BF0023CE9B /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		83B204462027E78700D294EA /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				83B204472027E7BB00D294EA /* PostCell.swift */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
 		83E847D2202737BF0023CE9B = {
 			isa = PBXGroup;
 			children = (
@@ -132,10 +152,9 @@
 		83E847DD202737BF0023CE9B /* ig-clone */ = {
 			isa = PBXGroup;
 			children = (
+				83B204462027E78700D294EA /* objects */,
+				83B204452027E76200D294EA /* Views */,
 				83E847DE202737BF0023CE9B /* AppDelegate.swift */,
-				83B204412027D16000D294EA /* HomeViewController.swift */,
-				83B2043F2027822300D294EA /* SignUpViewController.swift */,
-				83E847E0202737BF0023CE9B /* ViewController.swift */,
 				83E847E2202737BF0023CE9B /* Main.storyboard */,
 				83E847E5202737BF0023CE9B /* Assets.xcassets */,
 				83E847E7202737BF0023CE9B /* LaunchScreen.storyboard */,
@@ -480,6 +499,7 @@
 				83B204402027822300D294EA /* SignUpViewController.swift in Sources */,
 				83E847E1202737BF0023CE9B /* ViewController.swift in Sources */,
 				83B204442027E15200D294EA /* ProfileViewController.swift in Sources */,
+				83B204482027E7BB00D294EA /* PostCell.swift in Sources */,
 				83E847DF202737BF0023CE9B /* AppDelegate.swift in Sources */,
 				83B204422027D16000D294EA /* HomeViewController.swift in Sources */,
 			);

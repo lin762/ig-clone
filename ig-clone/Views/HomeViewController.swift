@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +22,25 @@ class HomeViewController: UIViewController {
         let image = #imageLiteral(resourceName: "logo")
         let imageView = UIImageView(image: image)
         
-        let bannerWidth = (navController?.navigationBar.frame.size.width)!/2
+        let bannerWidth = navController?.navigationBar.frame.size.width
         let bannerHeight = navController?.navigationBar.frame.size.height
         
-        let bannerX = bannerWidth/2 - image.size.width/2
+        let bannerX = bannerWidth!/2 - image.size.width/2
         let bannerY = bannerHeight!/2 - image.size.height/2
         
-        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight!)
+        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth!, height: bannerHeight!)
         imageView.contentMode = .left
         imageView.contentMode = .scaleAspectFit
         
         navigationItem.titleView = imageView
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
     }
     
     override func didReceiveMemoryWarning() {
