@@ -187,13 +187,43 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="352" id="c6p-oO-DCp">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="352"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="422" id="c6p-oO-DCp" customClass="PostCell" customModule="ig_clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c6p-oO-DCp" id="Sve-v1-GbO" customClass="PostCell" customModule="ig_clone" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="351.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="421.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A4q-sT-eDX">
+                                                    <rect key="frame" x="15" y="48" width="345" height="293"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICv-WA-7t3">
+                                                    <rect key="frame" x="52" y="15" width="79" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aqG-Hk-gLb">
+                                                    <rect key="frame" x="15" y="11" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYm-Q9-t7v">
+                                                    <rect key="frame" x="15" y="349" width="345" height="62"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="dYm-Q9-t7v" id="N6K-cj-ROk"/>
+                                            <outlet property="postImageView" destination="A4q-sT-eDX" id="hmC-fd-SVV"/>
+                                            <outlet property="profileImageView" destination="aqG-Hk-gLb" id="QMa-WP-AZ6"/>
+                                            <outlet property="username1Label" destination="ICv-WA-7t3" id="9xU-fQ-pOf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -202,10 +232,13 @@
                         <viewLayoutGuide key="safeArea" id="MCL-LV-ACb"/>
                     </view>
                     <navigationItem key="navigationItem" id="TW1-nC-hxb"/>
+                    <connections>
+                        <outlet property="postTableView" destination="h7A-6X-2MN" id="yuH-3j-DKU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0P-mf-lyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2857" y="441"/>
+            <point key="canvasLocation" x="2856.8000000000002" y="440.32983508245883"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="OUV-qu-Tuv">
@@ -278,6 +311,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2Bc-OY-75X" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qGi-HA-CKS">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

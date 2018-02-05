@@ -10,8 +10,14 @@ import UIKit
 
 class PostCell: UITableViewCell {
 
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var captionLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width/2
         // Initialization code
     }
 
