@@ -174,50 +174,57 @@
             </objects>
             <point key="canvasLocation" x="142" y="895"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="Wuo-1O-7w1">
             <objects>
                 <viewController id="yZg-wn-rtT" customClass="HomeViewController" customModule="ig_clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DeM-rK-xVh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2L-Nc-E4m">
-                                <rect key="frame" x="43" y="256" width="246" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MCL-LV-ACb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="TW1-nC-hxb">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="SUg-0x-fes">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NSx-Km-wzD">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="onLogout:" destination="yZg-wn-rtT" eventType="touchUpInside" id="dVn-B9-jLc"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="testLabel" destination="U2L-Nc-E4m" id="Gk4-8S-6iL"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="TW1-nC-hxb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0P-mf-lyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2856.8000000000002" y="-0.44977511244377816"/>
         </scene>
-        <!--Item-->
+        <!--Profile View Controller-->
+        <scene sceneID="OUV-qu-Tuv">
+            <objects>
+                <viewController id="s96-K2-iuC" customClass="ProfileViewController" customModule="ig_clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lx0-Iu-J87">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aRk-wo-q5L"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="p9k-3l-cew">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="DuQ-Z4-92K">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zpb-Gv-heX">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogout:" destination="s96-K2-iuC" eventType="touchUpInside" id="o3V-AA-QrC"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" id="cbl-4k-VGW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wvd-8e-R3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2857" y="718"/>
+        </scene>
+        <!--Feed-->
         <scene sceneID="P2v-Yt-7In">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Ae-Pn-bAn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Mor-Tk-a6G"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="feed_tab" id="Mor-Tk-a6G"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YOU-eI-Gmu">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -243,14 +250,36 @@
                     </tabBar>
                     <connections>
                         <segue destination="7Ae-Pn-bAn" kind="relationship" relationship="viewControllers" id="zj3-HE-S4D"/>
+                        <segue destination="aid-QV-wIc" kind="relationship" relationship="viewControllers" id="TLI-dO-2oM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kt-E0-YUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1167" y="442"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="Ukd-Vd-JRJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aid-QV-wIc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile_tab" id="3sa-Ty-pEL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kcf-md-0xc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="s96-K2-iuC" kind="relationship" relationship="rootViewController" id="klh-et-ybG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlr-b3-zeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2063" y="718"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="feed_tab" width="25" height="25"/>
         <image name="logo" width="320" height="114"/>
+        <image name="profile_tab" width="25" height="25"/>
     </resources>
 </document>
