@@ -60,13 +60,21 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                         print("User display name changed")
                     }
                 }
-                
-                let databaseRef = Database.database().reference()
-                let userRef = databaseRef.child("users")
                 let uid = user?.uid
-                let newUserRef = userRef.child(uid!)
-                newUserRef.setValue(["username": self.usernameField.text!, "email": self.emailField.text!])
-                let storageRef = Storage.storage().reference(forURL: "gs://ig-clone-55cad.appspot.com/")
+                
+                let storageRef = Storage.storage().reference(forURL: "gs://ig-clone-55cad.appspot.com/").child("profile_photo").child(uid!)
+                if let profileImg = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.1){
+                    storageRef.putData(imageData, metadata: nil, completion: {(metadata,error) in
+                        if error != nil{
+                            return
+                        }
+                        let profileImageUrl = metadata?.downloadURL()?.absoluteString
+                        let databaseRef = Database.database().reference()
+                        let userRef = databaseRef.child("users")
+                        let newUserRef = userRef.child(uid!)
+                        newUserRef.setValue(["username": self.usernameField.text!, "email": self.emailField.text!, "profileImageUrl": profileImageUrl])
+                    })
+                }
                 
                 self.usernameField.text = ""
                 self.emailField.text = ""
