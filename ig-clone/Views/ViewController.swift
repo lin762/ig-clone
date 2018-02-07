@@ -21,6 +21,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         emptyAlertController.addAction(OKAction)
         credentialAlertController.addAction(OKAction)
+        if Auth.auth().currentUser != nil{
+            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false, block: {(timer) in
+                self.performSegue(withIdentifier: "onSignInSegue", sender: nil)
+            })
+        }
     }
 
     @IBAction func onLogin(_ sender: Any) {
