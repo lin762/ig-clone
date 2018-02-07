@@ -19,6 +19,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
+    
+    var selectedImage: UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -58,6 +60,14 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                         print("User display name changed")
                     }
                 }
+                
+                let databaseRef = Database.database().reference()
+                let userRef = databaseRef.child("users")
+                let uid = user?.uid
+                let newUserRef = userRef.child(uid!)
+                newUserRef.setValue(["username": self.usernameField.text!, "email": self.emailField.text!])
+                let storageRef = Storage.storage().reference(forURL: "gs://ig-clone-55cad.appspot.com/")
+                
                 self.usernameField.text = ""
                 self.emailField.text = ""
                 self.passwordField.text = ""
@@ -78,6 +88,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         dismiss(animated: true, completion: nil)
         if let infoPhoto = info["UIImagePickerControllerOriginalImage"] as? UIImage{
             profileImageView.image = infoPhoto
+            selectedImage = infoPhoto
             addPhotoLabel.isHidden = true;
         }
     }
