@@ -9,11 +9,13 @@
 import UIKit
 import Firebase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let emptyAlertController = UIAlertController(title: "Error", message: "Please fill all fields", preferredStyle: .alert)
     let credentialAlertController = UIAlertController(title: "Error", message: "Incorrect password or e-mail", preferredStyle: .alert)
     
+    @IBOutlet weak var addPhotoLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
@@ -22,7 +24,17 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
         emptyAlertController.addAction(OKAction)
         credentialAlertController.addAction(OKAction)
-
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.handleProfileImage))
+        profileImageView.layer.cornerRadius = 50
+        profileImageView.clipsToBounds = true;
+        profileImageView.addGestureRecognizer(tapGesture)
+        profileImageView.isUserInteractionEnabled = true
+    }
+    
+    @objc func handleProfileImage(){
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        present(pickerController,animated: true, completion: nil)
     }
 
     @IBAction func onSignUp(_ sender: Any) {
@@ -62,6 +74,13 @@ class SignUpViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        dismiss(animated: true, completion: nil)
+        if let infoPhoto = info["UIImagePickerControllerOriginalImage"] as? UIImage{
+            profileImageView.image = infoPhoto
+            addPhotoLabel.isHidden = true;
+        }
+    }
     let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
         // handle response here.
     }
