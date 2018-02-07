@@ -27,6 +27,13 @@ class ViewController: UIViewController {
             })
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if Auth.auth().currentUser != nil{
+            self.performSegue(withIdentifier: "onSignInSegue", sender: nil)
+        }
+    }
 
     @IBAction func onLogin(_ sender: Any) {
         let email = emailField.text!
