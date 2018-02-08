@@ -20,7 +20,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         postTableView.dataSource = self
         addNavBarImage()
         loadPost()
-        postTableView.rowHeight = 400
+        postTableView.rowHeight = 500
         // Do any additional setup after loading the view.
         
     }
@@ -30,10 +30,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             if let dict = snapshot.value as? [String: Any]{
                 let captionText = dict["caption"] as! String
                 let photoUrlString = dict["photoUrl"] as! String
-                let post = Posts(captionText: captionText, photoUrl: photoUrlString)
+                //let uid = dict["user"] as! String
+                let date = dict["timestamp"] as! String
+                let post = Posts(captionText: captionText, photoUrl: photoUrlString, dateStr: date )
                 self.posts.append(post)
                 print(self.posts[0].caption!)
                 self.postTableView.reloadData()
+                print(Auth.auth().currentUser?.uid)
             }
         }
         
@@ -64,8 +67,23 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = postTableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
         let p = posts[indexPath.row]
+        let storageRef = Storage.storage().reference(forURL: p.photo!)
         cell.captionLabel.text = p.caption!
+        storageRef.getData(maxSize: 1*1024*1024){(data,error) -> Void in
+            let pic = UIImage(data: data!)
+            cell.postImageView.image = pic
+        }
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let cell = sender as! UITableViewCell
+        if let indexPath = postTableView.indexPath(for: cell){
+            let p = posts[indexPath.row]
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.post = p
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

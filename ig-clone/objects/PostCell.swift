@@ -17,7 +17,8 @@ class PostCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width/2
+        
+        //profileImageView.layer.cornerRadius = 5
         // Initialization code
     }
 

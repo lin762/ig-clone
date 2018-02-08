@@ -74,7 +74,8 @@ class addPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         let postRef = ref.child("posts")
         let newPostId = postRef.childByAutoId().key
         let newPostReference = postRef.child(newPostId)
-        newPostReference.setValue(["photoUrl": photoUrl, "caption": captionView.text!], withCompletionBlock: {
+        let now = getTodayString()
+        newPostReference.setValue(["photoUrl": photoUrl, "caption": captionView.text!, "user": Auth.auth().currentUser?.uid, "timestamp": now], withCompletionBlock: {
             (error, ref) in
             if error != nil{
                 //add alert
@@ -88,6 +89,26 @@ class addPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
 
             
         })
+        
+    }
+    
+    
+    func getTodayString() -> String{
+        
+        let date = Date()
+        let calender = Calendar.current
+        let components = calender.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+        
+        let year = components.year
+        let month = components.month
+        let day = components.day
+        let hour = components.hour
+        let minute = components.minute
+        let second = components.second
+        
+        let today_string = String(year!) + "-" + String(month!) + "-" + String(day!) + " " + String(hour!)  + ":" + String(minute!) + ":" +  String(second!)
+        
+        return today_string
         
     }
     

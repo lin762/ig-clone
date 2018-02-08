@@ -10,10 +10,13 @@ import Foundation
 class Posts: NSObject{
     var photo: String?
     var caption: String?
-    //var date: String?
+    //var user: String?
+    var date: String?
     
-    init(captionText: String, photoUrl: String){
+    init(captionText: String, photoUrl: String, dateStr: String){
         photo = photoUrl
         caption = captionText
+        //user = userID
+        date = dateStr
     }
 }
