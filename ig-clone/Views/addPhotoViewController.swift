@@ -26,6 +26,8 @@ class addPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         uploadPhotoView.addGestureRecognizer(tapGesture)
         uploadPhotoView.isUserInteractionEnabled = true
         emptyAlertController.addAction(OKAction)
+        captionView.textAlignment = .left
+        captionView.contentVerticalAlignment = .top
 
         // Do any additional setup after loading the view.
     }
