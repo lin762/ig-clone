@@ -12,13 +12,31 @@ import Firebase
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var postTableView: UITableView!
-    var posts: [Any] = []
+    var posts: [Posts] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         postTableView.delegate = self
         postTableView.dataSource = self
         addNavBarImage()
+        loadPost()
+        postTableView.rowHeight = 400
         // Do any additional setup after loading the view.
+        
+    }
+    
+    func loadPost(){
+        Database.database().reference().child("posts").observe(.childAdded){(snapshot: DataSnapshot) in
+            if let dict = snapshot.value as? [String: Any]{
+                let captionText = dict["caption"] as! String
+                let photoUrlString = dict["photoUrl"] as! String
+                let post = Posts(captionText: captionText, photoUrl: photoUrlString)
+                self.posts.append(post)
+                print(self.posts[0].caption!)
+                self.postTableView.reloadData()
+            }
+        }
+        
     }
 
     func addNavBarImage(){
@@ -45,6 +63,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = postTableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
+        let p = posts[indexPath.row]
+        cell.captionLabel.text = p.caption!
         return cell
     }
     

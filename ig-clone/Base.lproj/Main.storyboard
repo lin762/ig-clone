@@ -190,7 +190,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h7A-6X-2MN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h7A-6X-2MN">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -199,7 +199,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c6p-oO-DCp" id="Sve-v1-GbO" customClass="PostCell" customModule="ig_clone" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="421.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A4q-sT-eDX">
@@ -230,7 +230,7 @@
                                             <outlet property="captionLabel" destination="dYm-Q9-t7v" id="N6K-cj-ROk"/>
                                             <outlet property="postImageView" destination="A4q-sT-eDX" id="hmC-fd-SVV"/>
                                             <outlet property="profileImageView" destination="aqG-Hk-gLb" id="QMa-WP-AZ6"/>
-                                            <outlet property="username1Label" destination="ICv-WA-7t3" id="9xU-fQ-pOf"/>
+                                            <outlet property="usernameLabel" destination="ICv-WA-7t3" id="nfL-WY-7K9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

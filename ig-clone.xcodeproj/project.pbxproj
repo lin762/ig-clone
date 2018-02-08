@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		162E6EE633BA163603601F01 /* Pods_ig_cloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE625EAE2AD9E8821C30A5F9 /* Pods_ig_cloneTests.framework */; };
 		83182AB8202BFA7D00CECB87 /* addPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83182AB7202BFA7D00CECB87 /* addPhotoViewController.swift */; };
+		83182ABA202C357600CECB87 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83182AB9202C357600CECB87 /* Posts.swift */; };
 		836245EB2027409F003F6D70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 836245EA2027409F003F6D70 /* GoogleService-Info.plist */; };
 		836245EC20275882003F6D70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E847E7202737BF0023CE9B /* LaunchScreen.storyboard */; };
 		83B204402027822300D294EA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B2043F2027822300D294EA /* SignUpViewController.swift */; };
@@ -48,6 +49,7 @@
 		6975F72C18C26F7C8927AA57 /* Pods_ig_clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ig_clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		826C885BC7B96EE106F0A60E /* Pods-ig-cloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ig-cloneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ig-cloneTests/Pods-ig-cloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 		83182AB7202BFA7D00CECB87 /* addPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPhotoViewController.swift; sourceTree = "<group>"; };
+		83182AB9202C357600CECB87 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		836245EA2027409F003F6D70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83B2043F2027822300D294EA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		83B204412027D16000D294EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				83B204472027E7BB00D294EA /* PostCell.swift */,
+				83182AB9202C357600CECB87 /* Posts.swift */,
 			);
 			path = objects;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				83182AB8202BFA7D00CECB87 /* addPhotoViewController.swift in Sources */,
 				83E847DF202737BF0023CE9B /* AppDelegate.swift in Sources */,
 				83B204422027D16000D294EA /* HomeViewController.swift in Sources */,
+				83182ABA202C357600CECB87 /* Posts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

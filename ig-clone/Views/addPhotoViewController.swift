@@ -27,9 +27,9 @@ class addPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         uploadPhotoView.isUserInteractionEnabled = true
         emptyAlertController.addAction(OKAction)
 
-
         // Do any additional setup after loading the view.
     }
+    
     
     @objc func handleUploadPhoto(){
         let pickerController = UIImagePickerController()
